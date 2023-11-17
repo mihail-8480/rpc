@@ -1,0 +1,31 @@
+{
+  "name": "@mojsoski/rpc",
+  "version": "1.0.0",
+  "description": "A JSON-RPC 2.0 implementation using @mojsoski/streams",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "keywords": [
+    "rpc",
+    "stream"
+  ],
+  "author": "Mihail Mojsoski",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "watch": "npx tsc --watch",
+    "build": "npx tsc",
+    "prepare": "npm run build",
+    "version": "git add -A lib",
+    "postversion": "git push && git push --tags",
+    "start": "node dist/example.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@mojsoski/streams": "^1.0.1"
+  }
+}
